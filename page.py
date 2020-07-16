@@ -1,5 +1,7 @@
-from .app import app
+from flask import Blueprint, render_template, abort
 
-@app.route('/page', methods=['GET'])
+page_blueprint = Blueprint('page', __name__, template_folder='templates')
+
+@page_blueprint.route('/page', methods=['GET'])
 def page():
     return "page"
