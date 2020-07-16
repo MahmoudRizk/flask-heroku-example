@@ -1,10 +1,10 @@
 """Flask App Project."""
 
 from flask import Flask, jsonify, redirect, url_for
-from . import page
 
 app = Flask(__name__)
 
+from . import page
 
 @app.route('/', methods=['GET'])
 def index():
