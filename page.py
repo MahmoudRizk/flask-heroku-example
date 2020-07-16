@@ -1,5 +1,5 @@
 from .app import app
 
-@app.route('/page')
+@app.route('/page', methods=['GET'])
 def page():
     return "page"

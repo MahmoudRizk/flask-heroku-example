@@ -4,12 +4,12 @@ from flask import Flask, jsonify, redirect, url_for
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     # """Return homepage."""
     # json_data = {'Hello': 'World!'}
     # return jsonify(json_data)
-    return redirect(url_for('page'))
+    return redirect('page')
 
 if __name__ == '__main__':
     app.run()
