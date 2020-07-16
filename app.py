@@ -1,6 +1,8 @@
 """Flask App Project."""
 
 from flask import Flask, jsonify, redirect, url_for
+from . import page
+
 app = Flask(__name__)
 
 
